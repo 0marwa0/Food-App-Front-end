@@ -1,0 +1,9 @@
+.pageLayout {
+  display: flex;
+  flex-direction: column;
+}
+
+.pageContent {
+  max-height: 100%;
+  min-height: 600px;
+}
