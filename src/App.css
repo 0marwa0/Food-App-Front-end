@@ -1,0 +1,9 @@
+.food-img {
+  width: 60px;
+  height: 60px;
+}
+.main-btn-bg {
+  width: 200px !important;
+  background-color: #7a44ff !important;
+  color: white !important;
+}
