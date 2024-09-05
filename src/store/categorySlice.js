@@ -3,9 +3,17 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const fetchCategories = createAsyncThunk(
   "food/get-categories",
   async () => {
-    const response = await fetch("http:localhost:300/api/category/get-all");
-    const data = await response.json();
-    return data;
+    try {
+      const response = await fetch(
+        "http://localhost:3000/api/category/get-all"
+      );
+      const data = await response.json();
+
+      console.log(data, "api data");
+      return data;
+    } catch (error) {
+      console.log(error, "unable to get get the data");
+    }
   }
 );
 
@@ -19,6 +27,7 @@ const categorySlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchCategories.fulfilled, (state, action) => {
       state.status = "successed";
+      // console.log(action, "action paylod");
       state.data = action.payload;
     });
     builder.addCase(fetchCategories.rejected, (state) => {
