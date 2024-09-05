@@ -6,6 +6,7 @@ import Home from "./Pages/home";
 import Orders from "./Pages/orders";
 import Menu from "./Pages/menu";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Cart from "./Pages/cart";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CustomPage from "../components/customPage";
-import { useSelector, useDispatch } from "react-redux";
 import "../index.css";
-import { fetchItems } from "../store/resturantSlice";
 function Admin() {
   const [food, setFood] = useState([]);
   let getFood = async () => {
