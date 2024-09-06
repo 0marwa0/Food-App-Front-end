@@ -24,7 +24,6 @@ function Categories() {
 
   return (
     <CustomPage>
-      <p className="cat-p">test</p>
       <div className="container mt-4">
         <div className=" mb-4 d-flex gap-5">
           <input type="text" className="form-control" />

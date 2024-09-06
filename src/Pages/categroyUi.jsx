@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
 import { addCategories } from "../store/categorySlice";
 import { fetchCategories } from "../store/categorySlice";
+import { useSelector, useDispatch } from "react-redux";
 function CategoryUi({ setShowModal }) {
   const dispatch = useDispatch();
   const [title, setTitle] = useState("");
