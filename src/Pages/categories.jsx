@@ -44,8 +44,8 @@ function Categories() {
             {data?.map((item) => (
               <tr>
                 <td>{item.title}</td>
-                <td>
-                  <img src="" />
+                <td className="food-image">
+                  <img src={`http://localhost:3000/images/${item.image}`} />
                 </td>
               </tr>
             ))}

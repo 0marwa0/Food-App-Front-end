@@ -13,10 +13,7 @@ function CategoryUi({ setShowModal }) {
     setShowModal(false);
   };
   useEffect(() => {
-    // if the state.status is idle it means we fetch the data
-    // if status is idle then call fetch categoires
-    console.log(status);
-    if (status == "idle") {
+    if (status == "foodAdded") {
       dispatch(fetchCategories());
     }
   }, [status, dispatch]);

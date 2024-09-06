@@ -59,7 +59,7 @@ const categorySlice = createSlice({
       state.status = "loading";
     });
     builder.addCase(addCategories.fulfilled, (state) => {
-      state.status = "success";
+      state.status = "foodAdded";
     });
   },
 });
