@@ -1,0 +1,23 @@
+$main-color: rgb(134, 210, 134);
+$main-img: url("../assets/Images/dummyApp.png");
+
+$dark-green: darken($main-color, 20%);
+
+%shared-style {
+  background-color: aqua !important;
+  border: 2px solid red !important;
+}
+@mixin border($thickness: 1px, $style: solid, $colour: tomato) {
+  border: $thickness $style $colour;
+}
+@mixin sharedLayout($bg-color: pink, $color, $border: black) {
+  background-color: $bg-color !important;
+  border: 5px solid $border;
+  color: $color;
+}
+body {
+  @include sharedLayout(_, green, _);
+}
+.cat-p {
+  // @include sharedLayout(_, red, _);
+}
